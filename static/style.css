@@ -1,0 +1,8 @@
+body{
+    background-color: white;
+}
+
+table thead{
+    background-color: blueviolet;
+    color: white;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- importar Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- AlertifyJS CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <!-- AlertifyJS Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
+    <title>Area Tecnologia </title>
+</head>
+<body>
+<h1>Gerencia de Operaciones y Tecnologia</h1>
+<div id="container" class="mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+    <button id="btnCrear" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPersonal">Crear</button>
+    <table id="tablaPersonal" class="table mt-2 table-bordered table-striped">
+        <thead>
+        <tr class="text-center">
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Cargo</th>
+            <th>Edad</th>
+            <th>Acciones</th> <!-- Columna para botones de editar y borrar -->
+        </tr>
+        </thead>
+        <tbody id="contenedor">
+        <!-- Aquí se llenarán los datos de la tabla dinámicamente -->
+        </tbody>
+    </table>
+</div>
+<!-- Modal de creación/editar -->
+<div class="modal fade" id="modalPersonal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Persona</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input id="codigo" type="hidden"> <!-- Campo oculto para almacenar el ID del registro -->
+                    <div class="mb-3">
+                        <label for="nombres" class="col-form-label">Nombres</label>
+                        <input id="nombres" type="text" class="form-control" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="col-form-label">Apellidos</label>
+                        <input id="apellidos" type="text" class="form-control" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="col-form-label">Correo</label>
+                        <input id="correo" type="email" class="form-control" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="col-form-label">Cargo</label>
+                        <input id="cargo" type="text" class="form-control" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edad" class="col-form-label">Edad</label>
+                        <input id="edad" type="number" class="form-control" autofocus>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Bootstrap JS  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- AlertifyJS JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
